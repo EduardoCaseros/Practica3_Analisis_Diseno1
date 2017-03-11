@@ -20,6 +20,8 @@ namespace Practica2_AnalisisYDiseño1.Account
         {
             FormsAuthentication.SetAuthCookie(RegisterUser.UserName, createPersistentCookie: false);
 
+
+
             string continueUrl = RegisterUser.ContinueDestinationPageUrl;
             if (!OpenAuth.IsLocalUrl(continueUrl))
             {
