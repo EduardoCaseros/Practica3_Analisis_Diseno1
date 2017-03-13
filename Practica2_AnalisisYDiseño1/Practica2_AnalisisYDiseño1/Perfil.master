@@ -1,0 +1,16 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Perfil.master.cs" Inherits="Practica2_AnalisisYDiseño1.Perfil" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="Default.aspx">Homeeee</a></li>
+                    <li><a href="Contact.aspx">QUIENES SOMOS</a></li>
+                    <li><a href="Registro.aspx">REGISTRATE</a></li>
+                    <li><a href="Login.aspx">LOGIN</a></li>
+
+                </ul>
+            </div>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+</asp:Content>

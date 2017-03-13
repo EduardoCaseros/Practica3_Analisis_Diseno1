@@ -1,12 +1,26 @@
 ﻿<%@ Page Title="Iniciar sesión" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Practica2_AnalisisYDiseño1.Account.Login" %>
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 
+<asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
+   
+     <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1> INICIO DE SESIÓN </h1>
+                
+            </hgroup>
+          
+        </div>
+    </section>
+</asp:Content>
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+
+
     <hgroup class="title">
-        <h1><%: Title %>.</h1>
+       
     </hgroup>
     <section id="loginForm">
-        <h2>Utilice una cuenta local para iniciar sesión.</h2>
+        <h2>Utilice una cuenta para iniciar sesión.</h2>
         <asp:Login runat="server" ViewStateMode="Disabled" RenderOuterTable="false">
             <LayoutTemplate>
                 <p class="validation-summary-errors">

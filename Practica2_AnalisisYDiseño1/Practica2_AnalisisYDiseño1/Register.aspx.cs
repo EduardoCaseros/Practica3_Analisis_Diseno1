@@ -6,6 +6,9 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Membership.OpenAuth;
+using System.Data.SqlClient;
+
+
 
 namespace Practica2_AnalisisYDiseño1.Account
 {
@@ -25,6 +28,9 @@ namespace Practica2_AnalisisYDiseño1.Account
             string continueUrl = RegisterUser.ContinueDestinationPageUrl;
             if (!OpenAuth.IsLocalUrl(continueUrl))
             {
+                
+
+                
                 continueUrl = "~/";
             }
             Response.Redirect(continueUrl);

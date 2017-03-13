@@ -40,29 +40,31 @@
                         <ol>
 
                             <li>
-                                <div class="form-group">
-                                <asp:Label runat="server" AssociatedControlID="UserName">Nombre Completo</asp:Label>
-                                    </div>
-                                <div class="form-group">
-                                <asp:TextBox runat="server" ID="UserName" />
-                                    
-                                <asp:RequiredFieldValidator runat="server" ControlToValidate="UserName"
-                                    CssClass="field-validation-error" ErrorMessage="El campo de nombre de usuario es obligatorio." />
-                                    </div>
-                            </li>
-                            <li>
-                                <div class="form-group">
-                                    <asp:Label runat="server" AssociatedControlID="NickName">Nombre de usuario</asp:Label>
+                                 <div class="form-group">
+                                    <asp:Label runat="server" ID="Err" AssociatedControlID="Question">Nombre Completo</asp:Label>
                                     
                                 </div>
                                 <div class="form-group">
-                                    <asp:TextBox runat="server" ID="NickName" />
-                                <asp:RequiredFieldValidator runat="server" ControlToValidate="NickName"
-                                     CssClass="field-validation-error"  ErrorMessage="El campo nombre de usuario es obligatorio." />
+                                    <asp:TextBox runat="server" ID="Question" />
+                                <asp:RequiredFieldValidator runat="server" ControlToValidate="Question"
+                                     CssClass="field-validation-error"  ErrorMessage="Introducir su nombre completo es obligatorio es obligatorio." />
                                         
                                 
 
                                 </div>
+                                
+                            </li>
+                            <li>
+                                <div class="form-group">
+                                <asp:Label runat="server" AssociatedControlID="UserName">Nombre de usuario</asp:Label>
+                                    </div>
+                                <div class="form-group">
+                                <asp:TextBox runat="server" ID="UserName" name="UserName"/>
+                                    
+                                <asp:RequiredFieldValidator runat="server" ControlToValidate="UserName"
+                                    CssClass="field-validation-error" ErrorMessage="El campo de nombre de usuario es obligatorio." />
+                                    </div>
+                               
 
 
                             </li>

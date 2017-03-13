@@ -1,18 +1,14 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Practica2_AnalisisYDiseño1.SiteMaster" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Ingreso.aspx.cs" Inherits="Practica2_AnalisisYDiseño1.Ingreso" %>
 
 <!DOCTYPE html>
-<html lang="es">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta charset="utf-8" />
-    <title><%: Page.Title %> - TuCuenta.com</title>
-    <asp:PlaceHolder runat="server">     
-          <%: Scripts.Render("~/bundles/modernizr") %>
-    </asp:PlaceHolder>  
-    <webopt:BundleReference runat="server" Path="~/Content/css" /> 
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width" />
-    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+ <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>Login | TuSuerte</title>
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link href="css/font-awesome.min.css" rel="stylesheet"/>
     <link href="css/prettyPhoto.css" rel="stylesheet"/>
@@ -28,13 +24,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png"/>
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png"/>
 </head>
-    
-
-    
-
 <body>
-    <form runat="server">
-         <header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
+     <header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -43,20 +34,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="Default.aspx"><img src="images/logoTuSuerte2.png" alt="logo"></a>
+                <a class="navbar-brand" href="index.html"><img src="images/logoTuSuerte2.png" alt="logo"></a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="Default.aspx">Home</a></li>
-                    <li><a href="Contact.aspx">QUIENES SOMOS</a></li>
-                    <li><a href="RegistroUsuario.aspx">REGISTRATE</a></li>
-                    <li><a href="Ingreso.aspx">LOGIN</a></li>
+                    <li ><a href="Principal.html">Home</a></li>
+                    <li><a href="Quines_Somos.html">QUIENES SOMOS</a></li>
+                    <li ><a href="RegistroUsuario.aspx">REGISTRATE</a></li>
+                    <li class="active"><a href=".aspx">LOGIN</a></li>
 
                 </ul>
             </div>
         </div>
     </header><!--/header-->
-        <section id="main-slider" class="no-margin">
+    <section id="main-slider" class="no-margin">
         <div class="carousel slide wet-asphalt">
             <ol class="carousel-indicators">
                 <li data-target="#main-slider" data-slide-to="0" class="active"></li>
@@ -105,40 +96,71 @@
             <i class="icon-angle-right"></i>
         </a>
     </section><!--/#main-slider-->
-    <asp:ScriptManager runat="server">
-        <Scripts>
-            <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=272931&clcid=0x409 --%>
-            <%--Framework Scripts--%>
-            
-            <asp:ScriptReference Name="MsAjaxBundle" />
-            <asp:ScriptReference Name="jquery" />
-            <asp:ScriptReference Name="jquery.ui.combined" />
-            <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
-            <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
-            <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
-            <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
-            <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
-            <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
-            <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
-            <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-            <asp:ScriptReference Name="WebFormsBundle" />
-            <%--Site Scripts--%>
 
-        </Scripts>
-    </asp:ScriptManager>
-   
-    <div id="body">
-        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
-        <section class="content-wrapper main-content clear-fix">
-            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
-        </section>
-    </div>
-
-        <footer id="footer" class="midnight-blue">
+    
+    <section id="title" class="emerald">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <p>&copy; <%: DateTime.Now.Year %> - Roberto Caseros</p>
+                    <h1>BIENVENIDO</h1>
+                    <p>UNICAMENTE INGRESA TUS DATOS</p>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </section><!--/#title-->    
+
+    <section id="recent-works">
+        <div class="container">
+            <form id="form1" runat="server" class="center" role="form">
+                 <fieldset class="registration-form">
+               
+
+                <div class="form-group">
+                    <asp:Label runat="server" >Número de Cuenta</asp:Label>                                    
+                </div>
+                <div class="form-group">
+                    <asp:TextBox type="number" id="cuenta" name="cuenta" placeholder="cuenta" class="form-control" runat="server"></asp:TextBox>                                         
+                </div>
+
+                <div class="form-group">
+                    <asp:Label runat="server" >Nombre de Usuario</asp:Label>                                    
+                </div>
+                <div class="form-group">
+                    <asp:TextBox type="text" id="usuario" name="usuario" placeholder="Usuario" class="form-control" runat="server"></asp:TextBox>                    
+                </div>
+
+                <div class="form-group">
+                    <asp:Label runat="server" >Contraseña</asp:Label>                                    
+                </div>
+
+                <div class="form-group">
+                    <asp:TextBox type="password" id="pass" name="pass" placeholder="Contraseña" class="form-control" runat="server"></asp:TextBox>                    
+                </div>
+                 <div class="form-group">
+                       <asp:Label ID="Ms_error1" name="Ms_error1" style="color:red" Visible="false" runat="server" Text=""></asp:Label>
+                   
+                 </div>
+          
+
+                <div class="form-group">
+                    <asp:Button ID="b_ingreasr" name="b_ingresar" type="Button" class="btn btn-success btn-md btn-block" runat="server" Text="INGRESAR" OnClick="b_ingreasr_Click"  />
+                </div>
+            </fieldset>
+    
+            </form>
+        </div>
+    </section><!--/#recent-works-->
+
+
+
+
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2013 <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">Roberto Caseros Reynoso</a>. All Rights Reserved.
                 </div>
 
             </div>
@@ -149,7 +171,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
-
-    </form>
 </body>
 </html>
+
