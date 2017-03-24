@@ -26,18 +26,20 @@ namespace Practica2_AnalisisYDiseño1
                     {
                         //Conexion a la base de datos
                         
-                        DataTable Tabla = BaseDatos.LoginUsuario(Int32.Parse(cuenta.Text), usuario.Text, pass.Text);
-                        if (Tabla.Rows.Count == 0)
+                        int  Estado = BaseDatos.LoginUsuario(Int32.Parse(cuenta.Text), usuario.Text, pass.Text);
+                        if (Estado == 0)
                         {
                             //Datos no validos
                             Ms_error1.Text = "Los valores de cuenta, usuario y password no coincide, intente de nuevo";
                             Ms_error1.Visible = true;
 
                         }
-                        else 
+                        else if(Estado == 1)
                         {
                             Ms_error1.Text = "Datos VALIDOS";
                             Ms_error1.Visible = true;
+                            Session["cuenta_"] = Int32.Parse(cuenta.Text);
+                            Response.Redirect("Perfil.aspx");
                         }
                         
                         
